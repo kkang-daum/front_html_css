@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 테이블의 구조를 조금 명확하게 출력하기 위해서..  -->
+  <style>
+    table, th, td {
+      /* table 태그와 th 태그와 td 태그에 적용될 스타일 */
+      border: 1px solid #ccc;
+      border-collapse: collapse;/* 표의 테두리와 셀의 테두리 사이의 간격을 어떻게? */
+    }
+    th, td { padding: 10px 20px;}
+  </style>
+</head>
+<body>
+  <table style="width:400px">
+    <caption>회원정보</caption>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>a@a.com</td>
+      <td>123-1111</td>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>a@a.com</td>
+      <td>123-1111</td>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>a@a.com</td>
+      <td>123-1111</td>
+    </tr>
+  </table>
+
+  <p>cell 갯수가 맞지 않으면 가장 많은 row 기준..</p>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>Email</td>
+      <td></td>
+      <td>Phone</td>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>a@a.com</td>
+      <td>서울</td>
+      <td>0000-0000</td>
+    </tr>
+  </table>
+
+  <p>span... </p>
+  <table>
+    <tr>
+      <td colspan="4"><center>title</center></td>
+    </tr>
+    <tr>
+      <td colspan="2"><center>sub title</center></td>
+      <td colspan="2"><center>sub title</center></td>
+    </tr>
+    <tr>
+      <td>1 item</td>
+      <td>2 item</td>
+      <td>3 item</td>
+      <td>4 item</td>
+    </tr>
+  </table>
+
+  <p>colgroup, col, </p>
+  <p>테이블에 설정되는 스타일의 반복 설정을 피하기 위해서 사용</p>
+  <table>
+    <!-- colgroup 에 선언한 span2 는 지정한 스타일이 적용될 column 갯수.. -->
+    <colgroup span="2" style="background-color: lightpink;"></colgroup>
+    <tr>
+      <td>학번</td>
+      <td>이름</td>
+      <td>학과</td>
+    </tr>
+    <tr>
+      <td>111111</td>
+      <td>홍길동</td>
+      <td>전자공학과</td>
+    </tr>
+  </table>
+
+  <table>
+    <colgroup >
+      <col span="2" style="background-color: red;"/>
+      <col span="1"/>
+      <col span="3" style="background-color: pink;"/>
+      <col span="1" style="visibility: collapse;"/>
+    </colgroup>
+    <tr>
+      <th>MON</th>
+      <th>TUE</th>
+      <th>WED</th>
+      <th>THU</th>
+      <th>FRI</th>
+      <th>SAT</th>
+      <th>SUN</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </table>
+</body>
+</html>
