@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>video</p>
+  <video width="320" height="240" src="medias/movie.mp4" controls></video>
+  <p>audio</p>
+  <audio src="medias/spring.mp3" controls></audio>
+
+  <p>
+    위에처럼 video, audio 태그만 이용해서 유저에게 서비스 할수도 있겠지만... 
+    브라우저에 따라서.. audio, video 태그는 지원하지만.. 
+  audio, video 에 의해 서비스되는 영상, 음원 포멧이 다를 수 있다.. 
+   어떤 브라우저에서는 mp4 는 지원하지만. ogg 는 지원하지 않을 수 있고.. 반대일수도 있고
+   아래처럼 동일 영상을 여러 포맷으로 준비하고.. 서비스.. 
+  </p>
+  <video width="320" height="240" controls >
+    <!-- 아래처럼 source 를 여러개 나열하면 브라우저는 위에부터 순차적으로 판단..
+    지원한다면.. 아래는 무시.. -->
+    <source src="medias/movie.mp4" type="video/mp4"/>
+    <source src="medias/movie.ogv" type="video/ogg"/>
+    당신의 브라우저는 비디오를 지원하지 않습니다.
+  </video>
+</body>
+</html>
