@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>외부 html 을 현재의 html 에 포함.. </p>
+  <object data="test6-picture.html" width="100%" height="500px"></object>
+  <p>외부 html 을 object 태그로 포함시켜서 하나의 창에서 같이 뿌릴 수는 있지만...
+    일반적으로는 이것을 목적으로 해서 iframe 이 제공됨으로 iframe 을 이용한다..
+
+    원래 하나의 브라우저 창..에는 하나의 html 파일로 구성..
+    하나의 창에 두세개의 html 파일로 구성하고자 할때 사용하는 것이 frame
+    논리적인 창이라고 보면 된다.. iframe -
+    inner frame 어떤 창에 포함된 논리적인 새로운 창
+  </p>
+  <iframe src="test6-picture.html" width="1000px" height="600px"></iframe>
+  <br />
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/EyYTAyMHYrc?si=ofyJmBXkHr8oKl-G"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+  
+    <br/>
+    <p>이미지</p>
+    <object data="images/salad.jpg"></object>
+
+    <p>audio</p>
+    <object data="medias/spring.mp3" width="400" height="300"></object>
+    <p>video</p>
+    <object data="medias/salad.mp4" width="400" height="300"></object>
+
+    <p>pdf</p>
+    <object width="900" height="800" data="ect/product.pdf"></object>
+
+</body>
+
+</html>
