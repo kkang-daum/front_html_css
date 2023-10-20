@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>form</p>
+  <!-- 
+    http://127.0.0.1:5500/ch5/addUser?fname=aaa&lname=bbb
+    GET
+    get 방식은.. 서버 전송 데이터를 http request header 의 url 에 추가해서.. 
+
+    http://127.0.0.1:5500/ch5/addUser ? fname=aaa&lname=bbb
+                                  url?data
+
+    fname=aaa&lname=bbb : 서버 전송 데이터.. http request (query 문자열).. 
+    query 문자열은 항상 key = value 형태이다.. 
+    여러건을 전달하려면 꼭 & 으로 연결해서.. 
+    key=value&key=value
+
+    https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EB%A5%98%ED%98%84%EC%A7%84
+   -->
+  <form action="addUser">
+    <!-- id, name 모두 개발자가 식별을 위해 지정한 문자열.. 
+      id - front 에서 js 혹은 css 로 이 input 태그를 이용할때 식별자..
+      name - 이 input 태그에 유저가 입력한 데이터를 서버에 전송할때의 식별자.. 
+    -->
+    first name : <input type="text" id="fname" name="fname"/><br/>
+    last name : <input type="text" id="lname" name="lname" /><br/>
+    <!-- value - 버튼 문자열..  -->
+    <input type="submit" value="가입"/>
+  </form>
+  
+  <p>target</p>
+  <!-- 새로운 창이 뜨고.. 그 창의 url
+  http://127.0.0.1:5500/ch5/addUser?fname=aaa&lname=bbb
+ -->
+  <form action="addUser" target="_blank">
+    first name : <input type="text" id="fname" name="fname"/><br/>
+    last name : <input type="text" id="lname" name="lname" /><br/>
+    <input type="submit" value="가입"/>
+  </form>
+
+  <!-- 
+    http://127.0.0.1:5500/ch5/addUser
+    post 방식으로 서버 요청이 들어감으로.. 유저 입력 데이터가.. 
+    http request header 에 추가되지는 않는다..
+
+    데이터는 http request body 에 포함되서 전송된다..
+    그 데이터도 http request query 문저열로 구성된다... 
+    fname=aaa&lname=bbb
+   -->
+  <p>post</p>
+  <form action="addUser" method="post">
+    first name : <input type="text" id="fname" name="fname"/><br/>
+    last name : <input type="text" id="lname" name="lname" /><br/>
+    <input type="submit" value="가입"/>
+  </form>
+
+  <p>원한다면.. get, post 처럼 일부 데이터는 
+    url 에 추가해서.. 일부 데이터는 body 에 추가해서.. 
+  </p>
+  <!-- 
+    Request URL: http://127.0.0.1:5500/ch5/addUser?a1=10&a2=20
+    Request Method:POST
+   -->
+  <form action="addUser?a1=10&a2=20" method="post">
+    first name : <input type="text" id="fname" name="fname"/><br/>
+    last name : <input type="text" id="lname" name="lname" /><br/>
+    <input type="submit" value="가입"/>
+  </form>
+</body>
+</html>
