@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <!-- 관련된 입력 요소를 시각적으로 묶여 있게 표현하기 위해서..  -->
+    <fieldset>
+      <legend>필수입력</legend>
+      <!-- label 의 for 와 input 의 id 값이 매핑..  -->
+      <label for="fname">first name : </label><br/>
+      <input type="text" id="fname" name="fname" value="kim"/>
+
+      <!-- 유저 입력은 애플리케이션 입장에서는 비 신뢰적이라고 가정하고 개발한다.
+      유저 입력이 우리가 원하는 형태의 데이터인지 체크(valid check) 라고 하는데..
+    이를 개발자 코드에서 할수도 있고(실제 그렇게 많이 한다.. front(js), back())
+  
+        브라우저에서도 도와준다.. 브라우저의 도움을 받아서 처리할 수도 있다.. 
+
+        input 에 pattern 속성을 추가하게 되면 유저가 입력한 데이터를 브라우저가
+        pattern 값을 보고 비교해서.. 패턴에 맞는 데이터인지 체크
+        맞지 않으면 브라우저가 알아서 에러 출력.. 
+
+        패턴 - 문자열이 우리가 원하는 패턴인지를 판단하는 것.. 정규표현식으로..
+        
+        123-8888-9999
+
+        title 까지 지정하면 브라우저가 invalid  상황에 뿌리는 에러메시지에
+        title 문자열 활용.. 
+    -->
+      <label for="phone">phone : </label><br/>
+      <input type="tel" id="phone" name="phone" 
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+        title="전화번호 타입에 맞게 작성해야 합니다."/>
+
+      <!-- 
+        정규표현식.. 
+        ^x : x로 시작
+        x$ : 끝
+        .x : 임의의 한자리
+
+        x+ : 문자가 한번 이상 반복
+        x? : 없거나 한번
+        x* : 없거나 여러번.
+
+        {3} : 3번
+        {3,} : 3번 이상
+        {3, 5} : 3~5
+
+        [xy] : x 이거나 y, 둘중 하나
+        [^xy]: x, y 가 아닌 
+        [a-z] : a~z
+        [0-9] : 0~9
+        [A-Z] : 
+
+        \d : 숫자.. 
+       -->
+       <input type="submit"/>
+    </fieldset>
+  </form>
+</body>
+</html>
