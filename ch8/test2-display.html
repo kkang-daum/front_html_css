@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p, span {
+      border: 1px solid #222;
+    }
+    #id1, #id2 {
+      /* p 태그이다.. 기본이 block 요소이다.. inline 으로 바꾸고 싶다.. 
+      inline 으로 바꾸었기 때문에.. 사이즈 지정 적용 안된다..  */
+      display: inline;
+      width: 50%;
+      height: 50px;
+    }
+    #id3, #id4 {
+      /* span, 기본이 inline, 이걸 block 으로 교체., 사이즈 지정 가능해진다.. */
+      display: block;
+      width: 50%;
+      height: 50px;
+    }
+    #id5, #id6 {
+      /* inline-block 으로 변경.. 한줄에 같이 나오게 하면서.. 사이즈 조정을 하고 싶을때 */
+      display: inline-block;
+      width: 20%;
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+    nav ul li {
+      display: inline-block;
+      padding: 20px;
+      margin: 0 20px;
+      border: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>block</h1>
+  <p>Hello</p>
+  <p>World</p>
+
+  <!-- div, span 모두.. html 문서내에서 특정 영역을 표현하기 위해서.. 구조를 위해
+  div - block, span - inline -->
+  <h1>inline</h1>
+  <span>Hello</span>
+  <span>World</span>
+
+  <h1>display - inline</h1>
+  <p id="id1">Hello</p>
+  <p id="id2">World</p>
+
+  <h1>display - block</h1>
+  <span id="id3">Hello</span>
+  <span id="id4">World</span>
+
+  <h1>display - inline-block</h1>
+  <span id="id5">Hello</span>
+  <span id="id6">World</span>
+
+  <h1>메뉴구성</h1>
+  <nav>
+    <ul>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+  </nav>
+</body>
+</html>
