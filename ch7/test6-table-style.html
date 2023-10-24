@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      color: gray;
+      line-height: 1.5em;
+    }
+    #one {
+      width: 90%;
+      border: 3px solid;
+      border-collapse: collapse;/* 기본으로는 두줄로 나올수 있다. 
+      table 과 td 의 선이 두개라 보여서.. 합쳐라..*/
+      border-spacing: 1em;
+      margin: 0 auto;
+    }
+    /* table 제목..  */
+    #one caption {
+      caption-side: bottom;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-align: right;
+    }
+    /* id 가 one 인 태그 하위에 tr 태그, tr 에 마우스가 올라온 경우에 */
+    #one tr:hover {
+      background: lightgray;
+      color: white;
+    }
+
+    #one th, #one td {
+      border: 1px solid gray;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <table id="one">
+    <caption>즐겨 듣는 곡</caption>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>곡명</th>
+        <th>아티스트</th>
+        <th>앨범</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Super Shy</td>
+        <td>NewJeans</td>
+        <td>NewJeans 'Super Shy'</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>퀸카</td>
+        <td>여자 아디들</td>
+        <td>I feel</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>I AM</td>
+        <td>IVE</td>
+        <td>I`ve IVE</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
