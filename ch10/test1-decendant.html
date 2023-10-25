@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* id 값이 test1인 태그의 모든 하위중에서.. p 태그에.. */
+    #test1 p {
+      color: red;
+    }
+    /* id 가 test2인 태그의 모든 하위중 태그명이 div, 그 모든 하위중 태그명이 p */
+    #test2 div p {
+      color: blue;
+    }
+    /* id가 test3인 바로 하위(자식)태그중 태그명이 p */
+    #test3 > p {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <section id="test1">
+    <h1>test1</h1>
+    <p>one</p>
+    <div>
+      <p>two</p>
+      <p>three</p>
+    </div>
+    <p>four</p>
+  </section>
+
+  <section id="test2">
+    <h1>test2</h1>
+    <p>one</p>
+    <div>
+      <p>two</p>
+      <p>three</p>
+    </div>
+    <p>four</p>
+  </section>
+
+  <section id="test3">
+    <h1>test3</h1>
+    <p>one</p>
+    <div>
+      <p>two</p>
+      <p>three</p>
+    </div>
+    <p>four</p>
+  </section>
+</body>
+</html>
